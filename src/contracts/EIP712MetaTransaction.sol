@@ -1,14 +1,12 @@
 //SPDX-License-Identifier: MIT
-pragma solidity 0.6.6;
+pragma solidity 0.8.2;
 
 import "./lib/EIP712Base.sol";
-import "@openzeppelin/contracts/math/SafeMath.sol";
 
 contract EIP712MetaTransaction is EIP712Base {
-    using SafeMath for uint256;
     bytes32 private constant META_TRANSACTION_TYPEHASH = keccak256(bytes("MetaTransaction(uint256 nonce,address from,bytes functionSignature)"));
 
-    event MetaTransactionExecuted(address userAddress, address payable relayerAddress, bytes functionSignature);
+    event MetaTransactionExecuted(address userAddress, address relayerAddress, bytes functionSignature);
     mapping(address => uint256) private nonces;
 
     /*
@@ -44,7 +42,7 @@ contract EIP712MetaTransaction is EIP712Base {
             functionSignature: functionSignature
         });
         require(verify(userAddress, metaTx, sigR, sigS, sigV), "Signer and signature do not match");
-        nonces[userAddress] = nonces[userAddress].add(1);
+        nonces[userAddress] = nonces[userAddress]+1;
         // Append userAddress at the end to extract it from calling context
         (bool success, bytes memory returnData) = address(this).call(abi.encodePacked(functionSignature, userAddress));
 

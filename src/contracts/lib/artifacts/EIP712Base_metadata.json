@@ -1,0 +1,62 @@
+{
+	"compiler": {
+		"version": "0.8.2+commit.661d1103"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "version",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"metatx-standard/src/contracts/lib/EIP712Base.sol": "EIP712Base"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"metatx-standard/src/contracts/lib/EIP712Base.sol": {
+			"keccak256": "0x336d76aad39c5b74d2ace5207d2a13c6bee6dbc2f5a235de54f002522c71cbf2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f9d14d354a0270ae23ba999ccb33d939bb3e1c23c1c2956e34dc81f014e1a5d2",
+				"dweb:/ipfs/QmUK2SvouQSVd3gM4mWbM2gF76sh4od1Q5frxF97QTiQAn"
+			]
+		}
+	},
+	"version": 1
+}

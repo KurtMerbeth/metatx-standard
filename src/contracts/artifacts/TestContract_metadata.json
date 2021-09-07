@@ -1,0 +1,202 @@
+{
+	"compiler": {
+		"version": "0.8.2+commit.661d1103"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "userAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "relayerAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "functionSignature",
+						"type": "bytes"
+					}
+				],
+				"name": "MetaTransactionExecuted",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "userAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "functionSignature",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "sigR",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "sigS",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint8",
+						"name": "sigV",
+						"type": "uint8"
+					}
+				],
+				"name": "executeMetaTransaction",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "getNonce",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "nonce",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getQuote",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "currentQuote",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "currentOwner",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "quote",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "newQuote",
+						"type": "string"
+					}
+				],
+				"name": "setQuote",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"metatx-standard/src/contracts/TestContract.sol": "TestContract"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"metatx-standard/src/contracts/EIP712MetaTransaction.sol": {
+			"keccak256": "0xc34e7d8b95251a4e65ca032ee0f1f4c97f42797f5bd1c60cb59b5ff78573d0d8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e39eb982ef884aea52ff6e3a9d6a819b83f6dfa8656764d869424ce79b48575e",
+				"dweb:/ipfs/QmQdWCjGkAeGAKNQphcmUcAHvuyRW2p82MJ2jYCtJy1ZQk"
+			]
+		},
+		"metatx-standard/src/contracts/TestContract.sol": {
+			"keccak256": "0x82cab3b8d0ad23b5a4fbb17f0b4678f4324e47585480e2b4eff8fe43d1a3a0fd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://347968bfc329cbcd5bcd25905dec184a0e137150f028d86c7263a2b16656d515",
+				"dweb:/ipfs/QmNVfSxg8AkWXy2Uhyo1LSqomufkgjDxcS4a3D4Hnt7PL2"
+			]
+		},
+		"metatx-standard/src/contracts/lib/EIP712Base.sol": {
+			"keccak256": "0x336d76aad39c5b74d2ace5207d2a13c6bee6dbc2f5a235de54f002522c71cbf2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f9d14d354a0270ae23ba999ccb33d939bb3e1c23c1c2956e34dc81f014e1a5d2",
+				"dweb:/ipfs/QmUK2SvouQSVd3gM4mWbM2gF76sh4od1Q5frxF97QTiQAn"
+			]
+		}
+	},
+	"version": 1
+}
