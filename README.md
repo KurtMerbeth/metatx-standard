@@ -1,4 +1,4 @@
-# Generalized Meta Transaction
+# Generalized Meta Transaction (updated to Solidity 0.8.2)
 
 Repository containing a gas cost effective standard for meta transaction to be used by any contract to enable native meta transaction feature on any function.
 The approach support signed typed messages so that while signing the data on client side user see a human readable message instead of scary hex string.
